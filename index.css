@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,5 +55,34 @@ table {
 
 .h1-title {
     color: white;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 2%;
+    /* font-weight: 700; */
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    border: none;
+    border-radius: 10px 0 0 10px;
+    width: 30rem;
+    padding: 1em 0;
+    margin: 3% 0 0;
+}
+
+button {
+    /* display: inline; */
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    /* padding: .5em; */
+}
+
+/* TODO: make media for search bar in small screens */
+@media screen  {
+    
 }
