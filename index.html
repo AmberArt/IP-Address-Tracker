@@ -23,8 +23,10 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
   <link rel="stylesheet" href="./index.css">
-  <!-- Varela font -->
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <!-- Varela font
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> -->
 </head>
 <body>
 
@@ -33,8 +35,10 @@
     <section class="top">
       <h1 class="h1-title">IP Address Tracker</h1>
       <form action="">
-        <input type="text" placeholder="Search for any IP address or domain">
-        <input type="submit">
+        <input  class="search-bar" type="text" placeholder="Search for any IP address or domain">
+        <button>
+          <a class="submit-btn" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></a>
+        </button>
       </form>
     </section>
     <!-- display the results of the IP search -->
