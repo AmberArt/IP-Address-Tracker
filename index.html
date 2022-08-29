@@ -30,29 +30,32 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="">
     <!-- where you input the IP address -->
-    <section class="top">
+    <section class="top text-align">
       <h1 class="h1-title">IP Address Tracker</h1>
       <form action="">
         <input  class="search-bar" type="text" placeholder="Search for any IP address or domain">
-        <button>
+
           <a class="submit-btn" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></a>
-        </button>
+
       </form>
     </section>
     <!-- display the results of the IP search -->
-    <section class="container">
-      <div>
+    <section class="results-container flex">
+      <div class="">
         <h3>IP Address</h3>
       </div>
+      <hr style="width: 1px; height: 20px; display: inline-block;">
       <div>
         <h3>Location</h3>
       </div>
+      <hr style="width: 1px; height: 20px; display: inline;">
       <div>
         <h3>Timezone</h3>
         UTC <!-- TODO: add offset value dynamically using the API -->
       </div>
+      <hr style="width: 1px; height: 20px; display: inline;">
       <div>
         <h3>ISP</h3>
       </div>
