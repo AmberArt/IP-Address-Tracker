@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -42,6 +43,10 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.hidden {
+    display: none; 
 }
 
 .container {
@@ -102,23 +107,59 @@ a > svg {
 }
 
 /* TODO: make media for search bar in small screens */
-@media screen  {
-    
-}
+/* @media only screen and (min-width: 1000px) {
+    .results-container{
+        position: relative;
+        bottom: 3.5rem;
+        width: 70%;
+        background-color: rgb(136, 11, 11);
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 2rem 4rem;
+    }
+
+    hr {
+        width: 0px; 
+        height: 5rem; 
+        display: inline
+    }
+} */
 
 .flex {
     display: flex;
     gap: var(--gap, 1em);
-    justify-content: center;
+    justify-content: space-evenly;
+    /* justify-items: flex-start; */
     margin: auto;
 }
 
+.ff-rubix {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .results-container {
-    position: relative;
-    bottom: 3.5rem;
+    position: absolute;
+    z-index: 1000;
+    left: 10%;
+    right: 10%;
+    bottom: 20%;
     width: 70%;
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 3rem;
+    padding: 2rem 4rem;
+    flex-direction: column;
+    text-align: center;
 }
+
+/* TODO: display results from ip api */
+.ipResults {
+    font-size: 1.2rem;
+}
+
+.ipResultHeading {
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+
+#map { height: 50vh; }
