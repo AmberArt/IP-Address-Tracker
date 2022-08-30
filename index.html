@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-  integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-  crossorigin=""/>
-   <!-- Leaflet's JavaScript -->
- <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
- integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
- crossorigin=""></script>
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+  <!-- Leaflet's JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.css" />
   <!-- Varela font
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> -->
 </head>
-<body>
 
-  <div class="">
+<body>
+  <div class="ff-rubix">
     <!-- where you input the IP address -->
     <section class="top text-align">
       <h1 class="h1-title">IP Address Tracker</h1>
       <form action="">
-        <input  class="search-bar" type="text" placeholder="Search for any IP address or domain">
+        <input id="ip" class="search-bar" type="text" placeholder="Search for any IP address or domain" />
 
-          <a class="submit-btn" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></a>
-
+        <a class="submit-btn" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+          </svg></a>
       </form>
     </section>
     <!-- display the results of the IP search -->
     <section class="results-container flex">
       <div class="">
-        <h3>IP Address</h3>
+        <h3 class="ipResultHeading">IP Address</h3>
+        <h4 id="address" class="ipResults"></h4>
       </div>
-      <hr style="width: 1px; height: 20px; display: inline-block;">
+      <hr class="hidden" />
       <div>
-        <h3>Location</h3>
+        <h3 class="ipResultHeading">Location</h3>
+        <h4 id="location" class="ipResults"></h4>
       </div>
-      <hr style="width: 1px; height: 20px; display: inline;">
+      <hr class="hidden"/>
       <div>
-        <h3>Timezone</h3>
-        UTC <!-- TODO: add offset value dynamically using the API -->
+        <h3 class="ipResultHeading">Timezone</h3>
+        UTC
+        <!-- TODO: add offset value dynamically using the API -->
+        <h4 id="timezone" class="ipResults"></h4>
       </div>
-      <hr style="width: 1px; height: 20px; display: inline;">
+      <hr class="hidden"/>
       <div>
-        <h3>ISP</h3>
+        <h3 class="ipResultHeading">ISP</h3>
+        <h4 id="isp" class="ipResults"></h4>
       </div>
     </section>
 
@@ -65,13 +79,15 @@
     <section>
       <div id="map"></div>
     </section>
-
   </div>
 
-  
+  <script src="./JavaScript/Geo-IPify.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   -->
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your
+      Name Here</a>.
   </div>
 </body>
+
 </html>
